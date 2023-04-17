@@ -5,11 +5,19 @@ GET http://localhost:5000/api/goals
 POST http://localhost:5000/api/goals
 Content-Type: application/json
 
+{
+    "text": "My Second Goal"
+}
 
 
 ###
-PUT http://localhost:5000/api/goals/1
+PUT http://localhost:5000/api/goals/643dc409f02749e6d95a52f1
+Content-Type: application/json
+
+{
+    "text": "Updated Goal"
+}
 
 
 ###
-DELETE http://localhost:5000/api/goals/2
+DELETE http://localhost:5000/api/goals/643dc409f02749e6d95a52f1
