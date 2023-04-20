@@ -1,23 +1,53 @@
 GET http://localhost:5000/api/goals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2RlOWY4MzExODU2ODgxN2JjNmNjMCIsImlhdCI6MTY4MTg2NDE5NSwiZXhwIjoxNjg0NDU2MTk1fQ.Zz1wDdExp_1-K8OKUFCqi1i3WWcnP2xUd5JCAgGIp44
 
 
 ###
 POST http://localhost:5000/api/goals
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2RlOWY4MzExODU2ODgxN2JjNmNjMCIsImlhdCI6MTY4MTg2NDE5NSwiZXhwIjoxNjg0NDU2MTk1fQ.Zz1wDdExp_1-K8OKUFCqi1i3WWcnP2xUd5JCAgGIp44
 
 {
-    "text": "My Second Goal"
+    "text": "This is Brad goal 1"
 }
 
 
 ###
-PUT http://localhost:5000/api/goals/643dc409f02749e6d95a52f1
+PUT http://localhost:5000/api/goals/643f359506293a8c48ddbf85
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2YwZmIyYzg0NjUxOTFjZmU4NGE1MyIsImlhdCI6MTY4MTk0MDYxNywiZXhwIjoxNjg0NTMyNjE3fQ.9OxVGCFUfGV-D4btpZCpFUTbeoZeViympc1FCzc7PuU
+
+{
+    "text": "This is John Goal 1"
+}
+
+
+###
+DELETE http://localhost:5000/api/goals/643f359506293a8c48ddbf85
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2RlOWY4MzExODU2ODgxN2JjNmNjMCIsImlhdCI6MTY4MTkzOTY3MCwiZXhwIjoxNjg0NTMxNjcwfQ._SYWx6jG5XIjh51i4uU9cVe5SUhUX3FxYSLH9xX4fi8
+
+
+# Users Route
+###  Create Users
+POST http://localhost:5000/api/users
 Content-Type: application/json
 
 {
-    "text": "Updated Goal"
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "123456"
 }
 
 
-###
-DELETE http://localhost:5000/api/goals/643dc409f02749e6d95a52f1
+### User login
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "brad@gmail.com",
+    "password": "123456"
+}
+
+### 
+GET http://localhost:5000/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2RlOWY4MzExODU2ODgxN2JjNmNjMCIsImlhdCI6MTY4MTk0MTE4NCwiZXhwIjoxNjg0NTMzMTg0fQ.8Oapr4XYRx5ODdj2670_Rm48L-OQgw1WD-Qs8QUYphA
